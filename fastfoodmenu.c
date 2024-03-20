@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 int main(){
@@ -12,25 +11,25 @@ int main(){
    int ingredients;
    int discounts;
    char codepromo[10];
-   while(true){
+   while(1){
    printf("Welcome to our restaurant\n");
    printf("To order food,Please choose:\n");
    printf("1 For Pizza\n");
    printf("2 For Tacos\n");
    printf("3 For Salad\n");
    printf("4 For Checkout\n");
-   while(true){
+   while(1){
    scanf("%d",&choise);
    switch(choise){
     case 1:
-         while(true){
+         while(1){
          printf("You ordered Pizza\n");
          printf("Choose The Size:\n");
          printf("For M Selcet 1\n");
          printf("For L Selcet 2\n");
          printf("For XL Selcet 3\n");
          total=pizza;
-         while(true){
+         while(1){
          scanf("%d",&size);
          switch(size){
             case 1:
@@ -55,7 +54,7 @@ int main(){
          printf("Selcet 2 For Chicken\n");
          printf("Selcet 3 For Beef\n");
          printf("Selcet 4 For Tuna\n");
-         while(true){
+         while(1){
          scanf("%d",&ingredients);
          switch(ingredients){
             case 1:
@@ -81,7 +80,7 @@ int main(){
          }
          printf("If You Student Selcet 1\n");
          printf("If You Senior Selcet 2\n");
-         while(true){
+         while(1){
          scanf("%d",&discounts);
          switch(discounts){
             case 1:
@@ -114,14 +113,14 @@ int main(){
            }
          }
     case 2:
-         while(true){
+         while(1){
          printf("You ordered Tacos\n");
          printf("Choose The Size:\n");
          printf("For M Selcet 1\n");
          printf("For L Selcet 2\n");
          printf("For XL Selcet 3\n");
          total=tacos;
-         while(true){
+         while(1){
          scanf("%d",&size);
          switch(size){
             case 1:
@@ -146,7 +145,7 @@ int main(){
          printf("Selcet 2 For Chicken\n");
          printf("Selcet 3 For Beef\n");
          printf("Selcet 4 For Tuna\n");
-         while(true){
+         while(1){
          scanf("%d",&ingredients);
          switch(ingredients){
             case 1:
@@ -172,7 +171,7 @@ int main(){
          }
          printf("If You Student Selcet 1\n");
          printf("If You Senior Selcet 2\n");
-         while(true){
+         while(1){
          scanf("%d",&discounts);
          switch(discounts){
             case 1:
@@ -260,31 +259,9 @@ int main(){
          printf("If You Senior Selcet 2\n");
          scanf("%d",&discounts);
          switch(discounts){
-            case 1:
-                printf("enter the code promo if you have");
-                scanf("%s",codepromo);
-                if(strcmp(codepromo,"freemeal")==0){
-                    printf("you have a freemeal");
-                    exit(0);
-                }else{
-                total=total-total*0.3;
-                total=total+total*0.19;
-                printf("Your Total Price is:%f £\n",total);
-                exit(0);
-                }
-            case 2:
-                printf("enter the code promo if you have");
-                scanf("%s",codepromo);
-                if(strcmp(codepromo,"freemeal")==0){
-                    printf("you have a freemeal");
-                    exit(0);
-                }else{
-                total=total-total*0.2;
-                total=total+total*0.19;
-                printf("Your Total Price is:%f £\n",total);
-                exit(0);
-                }
-           }
+             
+             
+         }
          } 
     case 4:
         exit(0);
