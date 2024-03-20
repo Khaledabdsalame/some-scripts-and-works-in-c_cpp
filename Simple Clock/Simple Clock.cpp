@@ -1,46 +1,47 @@
-#include<stdio.h>
+
 #include<windows.h>
 #include <stdlib.h>
-#include<stdbool.h>
+#include<iostream>
+using namespace std;
 int main() {
     int second;
     int min;
     int hour;
 
-         Rigle:
-              while (true) {
-                 printf("enter your hour: ");
-                 scanf_s("%d", &hour);
-                 if (hour > 23) {
-                      system("cls");
-                      continue;
-                    }
-                     else {
-                          break;
-                         }
-                      }
-                while (true) {
-                      printf("enter your min: ");
-                      scanf_s("%d", &min);
-                      if (min > 60) {
-                           system("cls");
-                                continue;
-                               }
-                       else {
-                           break;
-                          }
-                        }
-                  while (true) {
-                        printf("enter your second: ");
-                        scanf_s("%d", &second);
-                        if (second > 60) {
-                              system("cls");
-                                   continue;
-                                  }
-                             else {
-                                 break;
-                                     }
-                                  }
+Rigle:
+    while (1) {
+        std::cout << "Enter Your Hour(0-23)" << std::endl;
+        std::cin >> hour;
+        if (hour > 23 || hour < 0) {
+            system("cls");
+            continue;
+        }
+        else {
+            break;
+        }
+    }
+    while (1) {
+        std::cout << "Enter Your Min(0-60)" << std::endl;
+        std::cin >> min;
+        if (min > 60 || min < 0) {
+            system("cls");
+            continue;
+        }
+        else {
+            break;
+        }
+    }
+    while (1) {
+        std::cout << "Enter Your Second(0-60)" << std::endl;
+        std::cin >> second;
+        if (second > 60 || second < 0) {
+            system("cls");
+            continue;
+        }
+        else {
+            break;
+        }
+    }
     while (second <= 60 || hour < 24 || min < 60) {
         second++;
         if (second == 60) {
@@ -54,21 +55,21 @@ int main() {
         if (hour == 24) {
             hour = 0;
         }
-            printf("%d:%d:%d \n", hour, min, second);
-            printf("Enter e To change the Time \n");
-            printf("Enter c To Exit \n");
-            Sleep(1000);
-            if (GetAsyncKeyState('C')) {
-                system("cls");
-                exit(0);
-            }
-            if (GetAsyncKeyState('E'))
-            {    
-                system("cls");
-                goto Rigle;
-                
-                
-            }
+        std::cout << hour << ":" << min << ":" << second << std::endl;
+        std::cout << "Enter E to change time" << std::endl;
+        std::cout << "Enter C To exit" << std::endl;
+        Sleep(1000);
+        if (GetAsyncKeyState('C')) {
             system("cls");
-            }     
+            exit(0);
+        }
+        if (GetAsyncKeyState('E'))
+        {
+            system("cls");
+            goto Rigle;
+
+
+        }
+        system("cls");
     }
+}
